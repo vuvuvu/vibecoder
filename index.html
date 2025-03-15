@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Vibe Coder</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'space': ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gradient-text {
+            background: linear-gradient(45deg, #6366F1, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(-100vh) translateX(50px); opacity: 0; }
+        }
+
+        .hero-particles {
+            pointer-events: none;
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .input-gradient {
+            background: linear-gradient(to right, #1F2937, #111827);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .input-gradient:focus {
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-space">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-gray-900/80 backdrop-blur-lg z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold gradient-text">VibeCoder</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="hover:text-purple-400 transition-colors">Home</a>
+                    <a href="#features" class="hover:text-purple-400 transition-colors">Features</a>
+                    <a href="#course" class="hover:text-purple-400 transition-colors">Course</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-pink-500/20"></div>
+        <div class="hero-particles"></div>
+        <div class="container mx-auto px-6 py-24 relative">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 gradient-text animate-float">
+                    Become a Professional Vibe Coder
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12">
+                    Master the art of coding with vibes in just 2 easy steps
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center">
+                    <button class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-lg font-semibold hover:opacity-90 transform hover:scale-105 transition-all">
+                        Start Learning Now
+                    </button>
+                    <button class="px-8 py-4 bg-gray-800 rounded-full text-lg font-semibold hover:bg-gray-700 border border-purple-500/30 transform hover:scale-105 transition-all">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-indigo-500/10 rounded-full filter blur-3xl animate-float" style="animation-delay: 1s"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Why Choose Vibe Coding?</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="p-8 bg-gray-800 rounded-2xl hover:transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-6 text-purple-400">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Vibe-First Approach</h3>
+                    <p class="text-gray-400">Learn to code while maintaining perfect vibes. Our unique methodology ensures maximum flow state.</p>
+                </div>
+                <div class="p-8 bg-gray-800 rounded-2xl hover:transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-6 text-purple-400">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Quick Results</h3>
+                    <p class="text-gray-400">Just 2 steps to become a professional vibe coder. No previous experience required.</p>
+                </div>
+                <div class="p-8 bg-gray-800 rounded-2xl hover:transform hover:scale-105 transition-all">
+                    <div class="text-4xl mb-6 text-purple-400">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Community Vibes</h3>
+                    <p class="text-gray-400">Join a community of vibe coders who support each other in maintaining optimal coding energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section id="course" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">The 2-Step Course</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-12 p-8 bg-gray-800/50 rounded-2xl border border-purple-500/20">
+                    <h3 class="text-2xl font-bold mb-4">Step 1: Vibe Alignment</h3>
+                    <p class="text-gray-400 mb-6">Learn the fundamental principles of aligning your coding frequency with your project's energy.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-4"></i>
+                            <span>Understanding code vibrations</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-4"></i>
+                            <span>Setting up your vibe environment</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-8 bg-gray-800/50 rounded-2xl border border-purple-500/20">
+                    <h3 class="text-2xl font-bold mb-4">Step 2: Code Flow Mastery</h3>
+                    <p class="text-gray-400 mb-6">Master the art of maintaining perfect vibes while writing clean, efficient code.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-4"></i>
+                            <span>Advanced vibe debugging techniques</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-4"></i>
+                            <span>Deploying with positive energy</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup Section -->
+    <section class="py-24 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-8 gradient-text">Join the Vibe Revolution</h2>
+                <p class="text-xl text-gray-300 mb-12">Get exclusive access to our course and start your journey to becoming a professional vibe coder.</p>
+                <form id="email-form" class="flex flex-col md:flex-row gap-4 justify-center">
+                    <input type="email" placeholder="Enter your email" class="px-6 py-4 input-gradient rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 flex-1 max-w-md" required>
+                    <button type="submit" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-lg font-semibold hover:opacity-90 transform hover:scale-105 transition-all">
+                        Get Started
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>© 2024 VibeCoder. All rights reserved. Keep the vibes high 🚀</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
